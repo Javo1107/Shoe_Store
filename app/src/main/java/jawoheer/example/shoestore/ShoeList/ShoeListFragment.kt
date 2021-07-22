@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -20,7 +22,7 @@ import jawoheer.example.shoestore.models.Shoe
 
 class ShoeListFragment : Fragment() {
     private lateinit var binding: FragmentShoeListBinding
-    private lateinit var viewModel: ShoeListViewModel
+    private val viewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,11 +31,9 @@ class ShoeListFragment : Fragment() {
 
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
-        Log.i("ShoeListFragment", "VMProvider is called")
-        viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
+
 
         viewModel.shoeList.observe(viewLifecycleOwner, Observer { shoeList ->
-            Log.i("ShoeListFragment", "Observer is called")
 
             for (shoe in shoeList) {
                 addShoeToLinearLay(shoe)
@@ -44,6 +44,7 @@ class ShoeListFragment : Fragment() {
             view.findNavController()
                 .navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         return binding.root
     }
 

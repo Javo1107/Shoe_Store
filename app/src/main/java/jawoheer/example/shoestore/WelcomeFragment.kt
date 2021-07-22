@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -21,6 +22,7 @@ class WelcomeFragment : Fragment() {
         binding.goToOnboardButton.setOnClickListener {view ->
             view.findNavController().navigate(R.id.action_welcomeFragment_to_instructionFragment)
         }
+
         return binding.root
     }
 }

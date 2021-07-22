@@ -26,6 +26,6 @@ class ShoeListViewModel: ViewModel() {
     }
     fun addShoeToList(shoeName: String, shoeSize: Double){
         _shoeList.value?.add(Shoe(shoeName, shoeSize))
-//        Log.i("ShoeListViewModel", "${shoeList.value?.get(3)}")
+        Log.i("ShoeListViewModel", "${shoeList.value?.size}")
     }
 }

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.navigation.NavigationView
 import jawoheer.example.shoestore.databinding.FragmentLoginBinding
 
 
@@ -23,6 +24,8 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
+
+
         return binding.root
     }
 
