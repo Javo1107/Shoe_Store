@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WelcomeFragment"
-    android:gravity="center_vertical"
-    android:paddingHorizontal="@dimen/sixteen_dp"
-    android:orientation="vertical">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_text"
-        android:layout_marginBottom="@dimen/sixteen_dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_text_two"
-        android:layout_marginBottom="@dimen/sixteen_dp"/>
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/sixteen_dp"
+        tools:context=".WelcomeFragment">
 
-    <Button
-        android:id="@+id/go_to_onboard_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_screen_button" />
+        <TextView
+            style="@style/txt_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sixteen_dp"
+            android:gravity="center"
+            android:text="@string/welcome_text" />
 
+        <TextView
+            style="@style/txt_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sixteen_dp"
+            android:gravity="center"
+            android:text="@string/welcome_text_two" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/go_to_onboard_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_screen_button"
+            android:textSize="@dimen/sixteen_sp" />
+
+    </LinearLayout>
 </layout>

@@ -8,10 +8,10 @@
     <string name="sign_in_button">Sign In</string>
     <string name="login_button">Login</string>
     <string name="welcome_text">Welcome to Shoe Store Online App</string>
-    <string name="welcome_text_two">Press the below button to go to Onboarding page</string>
-    <string name="welcome_screen_button">Onboarding Page</string>
-    <string name="instructions">Instructions</string>
-    <string name="show_ins">In this app, you can see a list of shoes, you can edit them</string>
+    <string name="welcome_text_two">Next page will introduce the instructions about how to use the app</string>
+    <string name="welcome_screen_button">Instruction Page</string>
+    <string name="instructions">You can check out variety of shoes in the next page</string>
+    <string name="show_ins">Also, you can add new shoe into our store list using a floating button on the bottom left hand corner</string>
     <string name="shoe_list">Shoe List</string>
     <string name="logout">Logout</string>
     <string name="title_activity_main">MainActivity</string>
@@ -29,4 +29,7 @@
     <string name="description">Description</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="password_hint">******</string>
+
+
 </resources>

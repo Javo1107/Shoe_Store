@@ -12,20 +12,24 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var drawerLayout: DrawerLayout
+
+    //    private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        setSupportActionBar(binding.toolbar)
-        drawerLayout = binding.drawerLayout
-        val navController = findNavController(R.id.nav_host_fragment)
-        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
 
-        NavigationUI.setupWithNavController(binding.navView, navController)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        setSupportActionBar(binding.toolbar)
+
+        val navController = findNavController(R.id.nav_host_fragment)
+
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
     }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()

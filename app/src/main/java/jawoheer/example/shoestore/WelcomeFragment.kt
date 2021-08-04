@@ -16,13 +16,14 @@ class WelcomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
-        binding.goToOnboardButton.setOnClickListener {view ->
+        val binding: FragmentWelcomeBinding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
+
+        binding.goToOnboardButton.setOnClickListener { view ->
             view.findNavController().navigate(R.id.action_welcomeFragment_to_instructionFragment)
         }
-
         return binding.root
     }
 }
