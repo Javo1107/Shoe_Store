@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!-- Removed nested linear layout
+    Using Linear Layout because it just contains two views which can be stacked vertically
+    and the reason not using constraint layout is that it requires constraint fields which can decrease performance-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -10,6 +13,7 @@
         tools:context=".MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.ShoeStore.AppBarOverlay">
@@ -23,19 +27,14 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <fragment
-                android:id="@+id/nav_host_fragment"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:defaultNavHost="true"
-                app:navGraph="@navigation/navigation" />
-
-        </LinearLayout>
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation" />
 
     </LinearLayout>
 

@@ -13,6 +13,9 @@
             type="jawoheer.example.shoestore.models.Shoe" />
     </data>
 
+    <!--    Using Constraint Layout because the hierarchy of views require nested layouts which decreases performance
+ takes more time to render. For more complex positioning views, Constraint layout is better option-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

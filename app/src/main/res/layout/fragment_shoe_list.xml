@@ -11,6 +11,7 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical">
 
+<!--    Simple list. Vertically stacked-->
             <LinearLayout
                 android:id="@+id/shoeList_ll"
                 android:layout_width="match_parent"
