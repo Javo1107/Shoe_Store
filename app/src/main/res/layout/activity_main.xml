@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 <!-- Removed nested linear layout
-    Using Linear Layout because it just contains two views which can be stacked vertically
+    Using Linear Layout because it just contains two views which can be aligned vertically
     and the reason not using constraint layout is that it requires constraint fields which can decrease performance-->
     <LinearLayout
         android:layout_width="match_parent"

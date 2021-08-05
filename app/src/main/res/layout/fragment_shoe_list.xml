@@ -11,7 +11,7 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical">
 
-<!--    Simple list. Vertically stacked-->
+<!--    Simple list. Vertically aligned. No nesting is required. Less rendering time than Constraint Layout-->
             <LinearLayout
                 android:id="@+id/shoeList_ll"
                 android:layout_width="match_parent"
